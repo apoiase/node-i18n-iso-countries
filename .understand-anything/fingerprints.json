@@ -1,0 +1,698 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "2b229d34a42831fa7fdfeaca706574a9c29608b9",
+  "generatedAt": "2026-07-18T19:03:21.824Z",
+  "files": {
+    ".gitignore": {
+      "filePath": ".gitignore",
+      "contentHash": "bbb6627e3b43a9a40debafbde3147fc9ec2fc7fe4d4084df1af5e1d7d5e7eea3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".jshintignore": {
+      "filePath": ".jshintignore",
+      "contentHash": "2e8252a245de1de0741728683e093b665f21043202b020326d3cde3f26c6d259",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".jshintrc": {
+      "filePath": ".jshintrc",
+      "contentHash": "e04c85b62097d29568441c58eae5cd5fe92049c1ef8684e70aacb6e7ad6856c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 89,
+      "hasStructuralAnalysis": false
+    },
+    ".travis.yml": {
+      "filePath": ".travis.yml",
+      "contentHash": "f07f35a14491ba4c16e63d523a714cc8ff26c4e208640c61ce8971cf58ff5419",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "LICENSE": {
+      "filePath": "LICENSE",
+      "contentHash": "9b3bd707c23dd2bdc57df2a4b42f402dc5d6c6f54e527608eeef24bbb161ac1b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "Makefile": {
+      "filePath": "Makefile",
+      "contentHash": "ec0bd170a811d1a08a418223119551c1f752821f5b83e7ccb0aea8d14ffe12ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "eeef8288eb1c568e9e9c4ddb484d72f78c4429d8950230d724d1082cc659864a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 210,
+      "hasStructuralAnalysis": true
+    },
+    "codes.json": {
+      "filePath": "codes.json",
+      "contentHash": "b36c61130c2b66e18eafa59421e2879816f72c5b0cce6e172bf68902bde8ca01",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 253,
+      "hasStructuralAnalysis": true
+    },
+    "entry-node.js": {
+      "filePath": "entry-node.js",
+      "contentHash": "5a53e44c1d36c22ddbd7b6154745ad62b351a139163a3f84104b434ef6273b35",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "index.d.ts": {
+      "filePath": "index.d.ts",
+      "contentHash": "73789dbba6673165f23d8677c53bd868b6fa645a607f3b3c7f48136d909c040f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "index.js": {
+      "filePath": "index.js",
+      "contentHash": "330dcabf91ef1e94ae243d21770f55174cd577421736bd8627f454c63f7528ed",
+      "functions": [
+        {
+          "name": "formatNumericCode",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "registerLocale",
+          "params": [
+            "localeData"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "alpha3ToAlpha2",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "alpha2ToAlpha3",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "alpha3ToNumeric",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "alpha2ToNumeric",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "numericToAlpha3",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "numericToAlpha2",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "toAlpha3",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 17
+        },
+        {
+          "name": "toAlpha2",
+          "params": [
+            "code"
+          ],
+          "exported": false,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 239,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ar.json": {
+      "filePath": "langs/ar.json",
+      "contentHash": "26d597867a90ccc3cdf6eddc3865171b4c152d3c4d4f9c25f4acb223c860c5c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/az.json": {
+      "filePath": "langs/az.json",
+      "contentHash": "3e6ff9c0a43c5fd8ac17558f9c91581658107d0c8d9af30f9cdf6578b66af3ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/be.json": {
+      "filePath": "langs/be.json",
+      "contentHash": "54647232fd9f0382f3a790f8a598503b323e6cbd5016818d0493d79e13dd5092",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/bg.json": {
+      "filePath": "langs/bg.json",
+      "contentHash": "f949803114b862cef107026f77b94bfc84246fae4eb6ae324f5edf89819876b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/bs.json": {
+      "filePath": "langs/bs.json",
+      "contentHash": "187b281c1ee0e0e0f65c0c8569535b43b8c2ffc40bd9dcd2ccd424791947150a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ca.json": {
+      "filePath": "langs/ca.json",
+      "contentHash": "754f1c94b25cfb8ce9ee2659f44ebc5e3b57cbf0cee346364dddcdcb076f1d5d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/cs.json": {
+      "filePath": "langs/cs.json",
+      "contentHash": "7701bba2c88a6f536c46d2eb29468a0254d14f08d868e5745822a54ebdf3b402",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/da.json": {
+      "filePath": "langs/da.json",
+      "contentHash": "5c81e6427e76861ed414cb17cd97fb68fb72ea9ff9f243529303b7acde9f65d2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/de.json": {
+      "filePath": "langs/de.json",
+      "contentHash": "db7342e5492904cc34fede944bd712ff48e4c5804dd297d9d398bf7e626b9882",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/el.json": {
+      "filePath": "langs/el.json",
+      "contentHash": "a1c343c82e09f3dbef326c6bdce953e1517b70db6b2d040de9a16aa0c291fa8e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/en.json": {
+      "filePath": "langs/en.json",
+      "contentHash": "ebb1e1247d0ec9ca8b688ab4e7133e19c35a7159b643a7e6649dcdb4c4b0b486",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/es.json": {
+      "filePath": "langs/es.json",
+      "contentHash": "43b270fe266a2eb86306d5eda5ca1bfc1c45049536fbbb21f09970c152d068af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/et.json": {
+      "filePath": "langs/et.json",
+      "contentHash": "9a63abf3e93bfb49ed032207114a0c97453861d81d8a61021abd15be849e3718",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/fa.json": {
+      "filePath": "langs/fa.json",
+      "contentHash": "9de4a9a5f7466e2cba0bdd4ee91f80b6ddb470647573b7be38bd50a11908cabb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/fi.json": {
+      "filePath": "langs/fi.json",
+      "contentHash": "1e7ecea37c45e5ddc42a3f6400039fe41dbccfeb84fc4cf9ba410f42355c9a1e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/fr.json": {
+      "filePath": "langs/fr.json",
+      "contentHash": "819f464f02db252e21bb1bb3ac11670de3c0fa7fd48fa05b590146a85253b653",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/he.json": {
+      "filePath": "langs/he.json",
+      "contentHash": "58a7cef580f24634d2bed09d0b65253c3731cb641e60de0e99d7f20cbf275e96",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/hr.json": {
+      "filePath": "langs/hr.json",
+      "contentHash": "d7c31df58714fdb5866fdac4c97cd52ab2fa65a99c2f7312c469f25902e13f4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/hu.json": {
+      "filePath": "langs/hu.json",
+      "contentHash": "8eada52c9538e4712cb5002cd825a3322840875969e37bf03fc7f3798728e4f4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/hy.json": {
+      "filePath": "langs/hy.json",
+      "contentHash": "5f49865c5ac0c40e0f18af73cedab7f9d0e5c4bb3760739721e21222a4970bba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/id.json": {
+      "filePath": "langs/id.json",
+      "contentHash": "1b1696066fdf6df19c3c76dbda220cd2e0efa8d6de4d2ea768101ca65c01e743",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/it.json": {
+      "filePath": "langs/it.json",
+      "contentHash": "e69d843119cadff4096c85ac03858a6eb18cc51603747f2ccde5ac2886283d91",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ja.json": {
+      "filePath": "langs/ja.json",
+      "contentHash": "4506d4cd44d1c636d998ae9738f6635ad6dcad0296224d9415668013d6f96f4a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ka.json": {
+      "filePath": "langs/ka.json",
+      "contentHash": "105360a13473128914be794990aeee91fe351b0181a897d414858b84c778d2ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/kk.json": {
+      "filePath": "langs/kk.json",
+      "contentHash": "652b7a62dfbd2fa855053a2dd6c2ac8d08e8f82fff7331a1435fe49b37961f54",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ko.json": {
+      "filePath": "langs/ko.json",
+      "contentHash": "28e635d8b7cba609beeef014fc76fb4a63785b57e997487f579562e33fc6563b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ky.json": {
+      "filePath": "langs/ky.json",
+      "contentHash": "56119f451059d5a14be3bf798d14c2e71d4385ed3005f8e2c42117dab0151adb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/lt.json": {
+      "filePath": "langs/lt.json",
+      "contentHash": "1f645cb67fc409c4495978a99de9a515afe73cc77be953604009b9bdccaa7fe0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/lv.json": {
+      "filePath": "langs/lv.json",
+      "contentHash": "020225bc3bf9a827a7eef35bef039fbb84afdee31f33b89f712eb0111075f34c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/mk.json": {
+      "filePath": "langs/mk.json",
+      "contentHash": "28db1cd12163ff7d570bdfc45716d0305305a5651883eda2f8ce65b453254e99",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/mn.json": {
+      "filePath": "langs/mn.json",
+      "contentHash": "032031594acd0b31ce8be327a770e3f3ad4836180246025f60ed9407e0d8b383",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/nb.json": {
+      "filePath": "langs/nb.json",
+      "contentHash": "e37bb40ca2e64be440a10dd287ace1ed4f7dd980b92f7365ff6850b5253cf209",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/nl.json": {
+      "filePath": "langs/nl.json",
+      "contentHash": "ee6760ef04c0e2d7e329e7ef4297472be24703346752f79a61208e0f26c7049c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/nn.json": {
+      "filePath": "langs/nn.json",
+      "contentHash": "e143dc7ca957b63654927d655894006aa121a0ac9f2000088e3c605679a6c9e0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/pl.json": {
+      "filePath": "langs/pl.json",
+      "contentHash": "4a68819b76761b5626d513d5aadc237a09adeca2e91f6e731b463e3502a84035",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/pt.json": {
+      "filePath": "langs/pt.json",
+      "contentHash": "5ef045911fc4c389bd9bcd888c5a402772b562b6b1775b304f75a93331de48d1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ro.json": {
+      "filePath": "langs/ro.json",
+      "contentHash": "2fe168a011f68e714dee738005e606ea8f03409ccfce916037f9ae7b86eb0227",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/ru.json": {
+      "filePath": "langs/ru.json",
+      "contentHash": "c2299af0370ebe10304a6f8181e11c9b1673bbc506ddaf74ca4db2731e9e86ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/sk.json": {
+      "filePath": "langs/sk.json",
+      "contentHash": "7911091b143b2624099a30a9f5cdda446f2694176dcf93b05e023b6f8e860dc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/sl.json": {
+      "filePath": "langs/sl.json",
+      "contentHash": "423fda11876f4224227b96ac22c46bbad668f3ebcf68dca865c47f68a8db74b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/sr.json": {
+      "filePath": "langs/sr.json",
+      "contentHash": "28730f0ca01bd28628b0760d72cad7a17facb5667bf72c886e945133e677c23c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/sv.json": {
+      "filePath": "langs/sv.json",
+      "contentHash": "e38983bb8f230b20fd8bb5b2bae56df3951eed5cb7a68b0e8f8f34fe180ef812",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/tr.json": {
+      "filePath": "langs/tr.json",
+      "contentHash": "785801d6e90d8d66089fb9eeb2f14d9f4e3b5e6cd820dfb5faa2325fe233a403",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/uk.json": {
+      "filePath": "langs/uk.json",
+      "contentHash": "b919f74d8819c2a754a2b3fc77c876a134c9eb2b3c5d2a25a8d1e35605864092",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "langs/uz.json": {
+      "filePath": "langs/uz.json",
+      "contentHash": "2f8f4549fe70a69acaf7741a8c300d438ad5b09122c15cd177acd4db06486025",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "langs/zh.json": {
+      "filePath": "langs/zh.json",
+      "contentHash": "bd21e919b3a5426ee5b46e24b0ff32b51e74c349352034a62d5e2ad81c254987",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 256,
+      "hasStructuralAnalysis": true
+    },
+    "package-lock.json": {
+      "filePath": "package-lock.json",
+      "contentHash": "9f9c1f579aba8af414edc22e2ab9a5c47ff07b7155d44c20f37f07465e5ac076",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3535,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "47c02ecde2ea37dd6f383c5093bb714a7811f337eda4abcd6c85a4cdee23951d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "test/.jshintrc": {
+      "filePath": "test/.jshintrc",
+      "contentHash": "3b851aa93991ff9c0ab7a844e0e2d144fc891bc02c1d5656904bc849e0a0e868",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "test/iso-i18n-countries.js": {
+      "filePath": "test/iso-i18n-countries.js",
+      "contentHash": "46a33ef64e507c17b6b5a37fd9e8d2f64ec8b583eea310782ef3fc129fdb78c5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 368,
+      "hasStructuralAnalysis": true
+    }
+  }
+}
