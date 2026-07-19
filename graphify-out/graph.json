@@ -1,0 +1,1283 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "entry-node.js",
+      "file_type": "code",
+      "source_file": "entry-node.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "entry_node",
+      "community": 0,
+      "norm_label": "entry-node.js"
+    },
+    {
+      "label": "index.d.ts",
+      "file_type": "code",
+      "source_file": "index.d.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "index_d",
+      "community": 5,
+      "norm_label": "index.d.ts"
+    },
+    {
+      "label": "LocalizedCountryNames",
+      "file_type": "code",
+      "source_file": "index.d.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "index_d_localizedcountrynames",
+      "community": 5,
+      "norm_label": "localizedcountrynames"
+    },
+    {
+      "label": "LocaleData",
+      "file_type": "code",
+      "source_file": "index.d.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "index_d_localedata",
+      "community": 5,
+      "norm_label": "localedata"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "index",
+      "community": 0,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "formatNumericCode()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "index_formatnumericcode",
+      "community": 3,
+      "norm_label": "formatnumericcode()"
+    },
+    {
+      "label": "registerLocale()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "index_registerlocale",
+      "community": 9,
+      "norm_label": "registerlocale()"
+    },
+    {
+      "label": "alpha3ToAlpha2()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "index_alpha3toalpha2",
+      "community": 3,
+      "norm_label": "alpha3toalpha2()"
+    },
+    {
+      "label": "alpha2ToAlpha3()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "index_alpha2toalpha3",
+      "community": 4,
+      "norm_label": "alpha2toalpha3()"
+    },
+    {
+      "label": "alpha3ToNumeric()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "index_alpha3tonumeric",
+      "community": 3,
+      "norm_label": "alpha3tonumeric()"
+    },
+    {
+      "label": "alpha2ToNumeric()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "index_alpha2tonumeric",
+      "community": 0,
+      "norm_label": "alpha2tonumeric()"
+    },
+    {
+      "label": "numericToAlpha3()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "index_numerictoalpha3",
+      "community": 4,
+      "norm_label": "numerictoalpha3()"
+    },
+    {
+      "label": "numericToAlpha2()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "index_numerictoalpha2",
+      "community": 3,
+      "norm_label": "numerictoalpha2()"
+    },
+    {
+      "label": "toAlpha3()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "index_toalpha3",
+      "community": 4,
+      "norm_label": "toalpha3()"
+    },
+    {
+      "label": "toAlpha2()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "index_toalpha2",
+      "community": 3,
+      "norm_label": "toalpha2()"
+    },
+    {
+      "label": "getName()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L147",
+      "_origin": "ast",
+      "id": "index_getname",
+      "community": 3,
+      "norm_label": "getname()"
+    },
+    {
+      "label": "getNames()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "index_getnames",
+      "community": 0,
+      "norm_label": "getnames()"
+    },
+    {
+      "label": "getAlpha2Code()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "index_getalpha2code",
+      "community": 4,
+      "norm_label": "getalpha2code()"
+    },
+    {
+      "label": "getAlpha2Codes()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "index_getalpha2codes",
+      "community": 0,
+      "norm_label": "getalpha2codes()"
+    },
+    {
+      "label": "getAlpha3Code()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "index_getalpha3code",
+      "community": 4,
+      "norm_label": "getalpha3code()"
+    },
+    {
+      "label": "getAlpha3Codes()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "index_getalpha3codes",
+      "community": 0,
+      "norm_label": "getalpha3codes()"
+    },
+    {
+      "label": "getNumericCodes()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L220",
+      "_origin": "ast",
+      "id": "index_getnumericcodes",
+      "community": 0,
+      "norm_label": "getnumericcodes()"
+    },
+    {
+      "label": "langs()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "index_langs",
+      "community": 0,
+      "norm_label": "langs()"
+    },
+    {
+      "label": "isValid()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "index_isvalid",
+      "community": 0,
+      "norm_label": "isvalid()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 1,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 1,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 1,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 1,
+      "norm_label": "description"
+    },
+    {
+      "label": "typings",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_typings",
+      "community": 1,
+      "norm_label": "typings"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_keywords",
+      "community": 1,
+      "norm_label": "keywords"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "package_author",
+      "community": 6,
+      "norm_label": "author"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "package_author_name",
+      "community": 6,
+      "norm_label": "name"
+    },
+    {
+      "label": "email",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "package_author_email",
+      "community": 6,
+      "norm_label": "email"
+    },
+    {
+      "label": "contributors",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "package_contributors",
+      "community": 1,
+      "norm_label": "contributors"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "package_license",
+      "community": 1,
+      "norm_label": "license"
+    },
+    {
+      "label": "repository",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "package_repository",
+      "community": 7,
+      "norm_label": "repository"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "package_repository_type",
+      "community": 7,
+      "norm_label": "type"
+    },
+    {
+      "label": "url",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "package_repository_url",
+      "community": 7,
+      "norm_label": "url"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 1,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "package_devdependencies",
+      "community": 2,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "assert-plus",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "package_devdependencies_assert_plus",
+      "community": 2,
+      "norm_label": "assert-plus"
+    },
+    {
+      "label": "mocha",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "package_devdependencies_mocha",
+      "community": 2,
+      "norm_label": "mocha"
+    },
+    {
+      "label": "jshint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "package_devdependencies_jshint",
+      "community": 2,
+      "norm_label": "jshint"
+    },
+    {
+      "label": "madge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "package_devdependencies_madge",
+      "community": 2,
+      "norm_label": "madge"
+    },
+    {
+      "label": "npmedge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "package_devdependencies_npmedge",
+      "community": 2,
+      "norm_label": "npmedge"
+    },
+    {
+      "label": "istanbul",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "package_devdependencies_istanbul",
+      "community": 2,
+      "norm_label": "istanbul"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "package_main",
+      "community": 1,
+      "norm_label": "main"
+    },
+    {
+      "label": "browser",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "package_browser",
+      "community": 1,
+      "norm_label": "browser"
+    },
+    {
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "package_engines",
+      "community": 11,
+      "norm_label": "engines"
+    },
+    {
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "package_engines_node",
+      "community": 11,
+      "norm_label": "node"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 8,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "package_scripts_test",
+      "community": 8,
+      "norm_label": "test"
+    },
+    {
+      "label": "bugs",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "package_bugs",
+      "community": 10,
+      "norm_label": "bugs"
+    },
+    {
+      "label": "url",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "package_bugs_url",
+      "community": 10,
+      "norm_label": "url"
+    },
+    {
+      "label": "iso-i18n-countries.js",
+      "file_type": "code",
+      "source_file": "test/iso-i18n-countries.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "test_iso_i18n_countries",
+      "community": 0,
+      "norm_label": "iso-i18n-countries.js"
+    },
+    {
+      "label": "Vis\u00e3o geral da lib i18n-iso-countries",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_visao_geral",
+      "community": 0,
+      "norm_label": "visao geral da lib i18n-iso-countries"
+    },
+    {
+      "label": "Padr\u00e3o de registro de locale sob demanda (registerLocale)",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_registro_locale",
+      "community": 9,
+      "norm_label": "padrao de registro de locale sob demanda (registerlocale)"
+    },
+    {
+      "label": "Matriz de CI legado Travis (Node 4-8)",
+      "file_type": "document",
+      "source_file": ".travis.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "travis_yml_ci_legado",
+      "community": 8,
+      "norm_label": "matriz de ci legado travis (node 4-8)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "entry-node.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "entry_node",
+      "target": "index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_visao_geral",
+      "target": "entry_node"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.d.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "index_d",
+      "target": "index_d_localedata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.d.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "index_d",
+      "target": "index_d_localizedcountrynames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_alpha2toalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_alpha2tonumeric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_alpha3toalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_alpha3tonumeric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_formatnumericcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getalpha2code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getalpha2codes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getalpha3code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getalpha3codes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getnames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getnumericcodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_isvalid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_langs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_numerictoalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_numerictoalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_registerlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_toalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_toalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_visao_geral",
+      "target": "index"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/iso-i18n-countries.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "test_iso_i18n_countries",
+      "target": "index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "index_numerictoalpha2",
+      "target": "index_formatnumericcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "index_numerictoalpha3",
+      "target": "index_formatnumericcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "readme_registro_locale",
+      "target": "index_registerlocale"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "index_alpha3tonumeric",
+      "target": "index_alpha3toalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "index_toalpha2",
+      "target": "index_alpha3toalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "index_numerictoalpha3",
+      "target": "index_alpha2toalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "index_toalpha3",
+      "target": "index_alpha2toalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "index_toalpha3",
+      "target": "index_numerictoalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "index_toalpha2",
+      "target": "index_numerictoalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "index_getalpha3code",
+      "target": "index_toalpha3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "index_getname",
+      "target": "index_toalpha2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "index_getalpha3code",
+      "target": "index_getalpha2code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_browser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_bugs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_contributors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_engines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_keywords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_repository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_typings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "package_author",
+      "target": "package_author_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "package_author",
+      "target": "package_author_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "package_repository",
+      "target": "package_repository_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "package_repository",
+      "target": "package_repository_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_assert_plus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_istanbul",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jshint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_madge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_mocha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_npmedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "package_engines",
+      "target": "package_engines_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".travis.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "travis_yml_ci_legado",
+      "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "package_bugs",
+      "target": "package_bugs_url",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "2b229d34a42831fa7fdfeaca706574a9c29608b9"
+}

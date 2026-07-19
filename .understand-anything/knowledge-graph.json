@@ -1,0 +1,1313 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "node-i18n-iso-countries",
+    "description": "Fork da biblioteca Node.js 'i18n-iso-countries': conversão entre códigos ISO 3166-1 (alpha-2, alpha-3, numeric) e nomes de países em 46 idiomas (ISO 639-1), com registro de locale sob demanda (browser) ou automático (entry point Node.js). Sem dependências de runtime; devDependencies só para lint/test/coverage.",
+    "languages": [
+      "javascript",
+      "json",
+      "typescript"
+    ],
+    "frameworks": [
+      "Mocha",
+      "JSHint",
+      "Travis CI (legado)"
+    ],
+    "analyzedAt": "2026-07-18T19:03:11Z",
+    "gitCommitHash": "2b229d34a42831fa7fdfeaca706574a9c29608b9"
+  },
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Documentação da lib i18n-iso-countries: instalação via npm, uso de registerLocale para carregar idiomas sob demanda (browser) ou via entry-node (Node.js), exemplos de getName/getNames/getAlpha2Code/toAlpha2/toAlpha3, lista dos idiomas suportados (ISO 639-1) e badges de build/npm apontando para o upstream michaelwittig/node-i18n-iso-countries.",
+      "tags": [
+        "documentation",
+        "usage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:LICENSE",
+      "type": "document",
+      "name": "LICENSE",
+      "filePath": "LICENSE",
+      "summary": "Licença MIT do projeto upstream (fork mantido pela Apoia.se).",
+      "tags": [
+        "license",
+        "mit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Manifesto npm 'i18n-iso-countries' v3.7.4: main=entry-node (Node.js), browser=index (bundlers), typings=index.d.js, script test='make test', devDependencies mocha/jshint/madge/istanbul/npmedge, sem dependencies de runtime, repository apontando pro upstream michaelwittig/node-i18n-iso-countries.",
+      "tags": [
+        "configuration",
+        "npm"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package-lock.json",
+      "type": "config",
+      "name": "package-lock.json",
+      "filePath": "package-lock.json",
+      "summary": "Lockfile npm das devDependencies (mocha, jshint, madge, istanbul, npmedge e transitivas). Sem dependencies de runtime a travar.",
+      "tags": [
+        "configuration",
+        "npm",
+        "lockfile"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.travis.yml",
+      "type": "config",
+      "name": ".travis.yml",
+      "filePath": ".travis.yml",
+      "summary": "CI legado Travis CI: roda a suíte em Node.js 4, 5, 6, 7 e 8 (`default: test`, delega ao Makefile). Sem execução real hoje — Travis CI não está mais integrado à org apoiase.",
+      "tags": [
+        "ci-cd",
+        "legacy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.jshintrc",
+      "type": "config",
+      "name": ".jshintrc",
+      "filePath": ".jshintrc",
+      "summary": "Configuração do linter JSHint aplicada ao código-fonte (index.js, entry-node.js).",
+      "tags": [
+        "configuration",
+        "lint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.jshintignore",
+      "type": "config",
+      "name": ".jshintignore",
+      "filePath": ".jshintignore",
+      "summary": "Padrões ignorados pelo JSHint (node_modules e afins).",
+      "tags": [
+        "configuration",
+        "lint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:test/.jshintrc",
+      "type": "config",
+      "name": "test/.jshintrc",
+      "filePath": "test/.jshintrc",
+      "summary": "Configuração JSHint específica da pasta de testes (habilita globals do mocha: describe/it).",
+      "tags": [
+        "configuration",
+        "lint",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Makefile",
+      "type": "config",
+      "name": "Makefile",
+      "filePath": "Makefile",
+      "summary": "Orquestra o pipeline de qualidade local: `test` roda jshint + circular (madge --circular) + mocha; `coverage` roda istanbul; `outdated` roda npmedge. É o alvo do script npm `test`.",
+      "tags": [
+        "build",
+        "test",
+        "lint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:index.js",
+      "type": "file",
+      "name": "index.js",
+      "filePath": "index.js",
+      "summary": "Núcleo da lib: carrega codes.json (tabela ISO 3166-1 alpha-2/alpha-3/numeric/ISO-3166-2) e monta os mapas alpha2/alpha3/numeric/invertedNumeric. Expõe registerLocale, alpha3ToAlpha2, alpha2ToAlpha3, alpha3ToNumeric, alpha2ToNumeric, numericToAlpha3, numericToAlpha2, toAlpha3, toAlpha2, getName, getNames, getAlpha2Code, getAlpha2Codes, getAlpha3Code, getAlpha3Codes, getNumericCodes, langs, isValid. É o entry point 'browser' do package.json — não registra nenhum idioma por padrão (fica a cargo de quem consome).",
+      "tags": [
+        "core",
+        "iso-3166",
+        "conversion"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:entry-node.js",
+      "type": "file",
+      "name": "entry-node.js",
+      "filePath": "entry-node.js",
+      "summary": "Entry point 'main' (Node.js) do package.json: importa index.js e pré-registra automaticamente 46 idiomas via registerLocale, um require() por arquivo em langs/*.json (ar, az, be, bg, bs, ca, cs, da, de, el — duplicado —, en, es, et, fa, fi, fr, he, hr, hu, hy, id, it, ja, ka, kk, ko, ky, lt, lv, mk, mn, nb, nl, nn, pl, pt, ro, ru, sk, sl, sr, sv, tr, uk, uz, zh). Nota: 'el' (grego) aparece duplicado na lista de requires; sem impacto funcional (registerLocale é idempotente por locale).",
+      "tags": [
+        "entrypoint",
+        "i18n",
+        "locale-loading"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:index.d.ts",
+      "type": "file",
+      "name": "index.d.ts",
+      "filePath": "index.d.ts",
+      "summary": "Typings TypeScript da API pública (registerLocale, toAlpha2, toAlpha3, getName, getNames, getAlpha2Code, getAlpha3Code, getAlpha2Codes, getAlpha3Codes, getNumericCodes, langs, isValid) — assinaturas espelhando index.js.",
+      "tags": [
+        "typescript",
+        "typings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:codes.json",
+      "type": "file",
+      "name": "codes.json",
+      "filePath": "codes.json",
+      "summary": "Tabela bruta ISO 3166-1: array de [alpha-2, alpha-3, numeric, iso-3166-2] para ~249 territórios/países. Fonte de dados carregada por index.js para montar os mapas de conversão de código.",
+      "tags": [
+        "data",
+        "iso-3166"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:test/iso-i18n-countries.js",
+      "type": "file",
+      "name": "test/iso-i18n-countries.js",
+      "filePath": "test/iso-i18n-countries.js",
+      "summary": "Suíte mocha (assert-plus) cobrindo toAlpha2/toAlpha3, conversões alpha<->numeric, getName/getNames, getAlpha2Code/getAlpha3Code e isValid — importa a lib via `require(\"../\")` (resolve para entry-node.js, o `main` do package.json).",
+      "tags": [
+        "test",
+        "mocha"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:langs/ar.json",
+      "type": "file",
+      "name": "ar.json",
+      "filePath": "langs/ar.json",
+      "summary": "Locale de dados 'ar' (árabe): mapa alpha-2 → nome do país em árabe, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ar"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/az.json",
+      "type": "file",
+      "name": "az.json",
+      "filePath": "langs/az.json",
+      "summary": "Locale de dados 'az' (azerbaijano): mapa alpha-2 → nome do país em azerbaijano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "az"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/be.json",
+      "type": "file",
+      "name": "be.json",
+      "filePath": "langs/be.json",
+      "summary": "Locale de dados 'be' (bielorrusso): mapa alpha-2 → nome do país em bielorrusso, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "be"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/bg.json",
+      "type": "file",
+      "name": "bg.json",
+      "filePath": "langs/bg.json",
+      "summary": "Locale de dados 'bg' (búlgaro): mapa alpha-2 → nome do país em búlgaro, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "bg"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/bs.json",
+      "type": "file",
+      "name": "bs.json",
+      "filePath": "langs/bs.json",
+      "summary": "Locale de dados 'bs' (bósnio): mapa alpha-2 → nome do país em bósnio, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "bs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ca.json",
+      "type": "file",
+      "name": "ca.json",
+      "filePath": "langs/ca.json",
+      "summary": "Locale de dados 'ca' (catalão): mapa alpha-2 → nome do país em catalão, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ca"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/cs.json",
+      "type": "file",
+      "name": "cs.json",
+      "filePath": "langs/cs.json",
+      "summary": "Locale de dados 'cs' (tcheco): mapa alpha-2 → nome do país em tcheco, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/da.json",
+      "type": "file",
+      "name": "da.json",
+      "filePath": "langs/da.json",
+      "summary": "Locale de dados 'da' (dinamarquês): mapa alpha-2 → nome do país em dinamarquês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "da"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/de.json",
+      "type": "file",
+      "name": "de.json",
+      "filePath": "langs/de.json",
+      "summary": "Locale de dados 'de' (alemão): mapa alpha-2 → nome do país em alemão, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "de"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/el.json",
+      "type": "file",
+      "name": "el.json",
+      "filePath": "langs/el.json",
+      "summary": "Locale de dados 'el' (grego): mapa alpha-2 → nome do país em grego, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "el"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/en.json",
+      "type": "file",
+      "name": "en.json",
+      "filePath": "langs/en.json",
+      "summary": "Locale de dados 'en' (inglês): mapa alpha-2 → nome do país em inglês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "en"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/es.json",
+      "type": "file",
+      "name": "es.json",
+      "filePath": "langs/es.json",
+      "summary": "Locale de dados 'es' (espanhol): mapa alpha-2 → nome do país em espanhol, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "es"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/et.json",
+      "type": "file",
+      "name": "et.json",
+      "filePath": "langs/et.json",
+      "summary": "Locale de dados 'et' (estoniano): mapa alpha-2 → nome do país em estoniano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "et"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/fa.json",
+      "type": "file",
+      "name": "fa.json",
+      "filePath": "langs/fa.json",
+      "summary": "Locale de dados 'fa' (persa): mapa alpha-2 → nome do país em persa, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "fa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/fi.json",
+      "type": "file",
+      "name": "fi.json",
+      "filePath": "langs/fi.json",
+      "summary": "Locale de dados 'fi' (finlandês): mapa alpha-2 → nome do país em finlandês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "fi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/fr.json",
+      "type": "file",
+      "name": "fr.json",
+      "filePath": "langs/fr.json",
+      "summary": "Locale de dados 'fr' (francês): mapa alpha-2 → nome do país em francês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "fr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/he.json",
+      "type": "file",
+      "name": "he.json",
+      "filePath": "langs/he.json",
+      "summary": "Locale de dados 'he' (hebraico): mapa alpha-2 → nome do país em hebraico, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "he"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/hr.json",
+      "type": "file",
+      "name": "hr.json",
+      "filePath": "langs/hr.json",
+      "summary": "Locale de dados 'hr' (croata): mapa alpha-2 → nome do país em croata, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "hr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/hu.json",
+      "type": "file",
+      "name": "hu.json",
+      "filePath": "langs/hu.json",
+      "summary": "Locale de dados 'hu' (húngaro): mapa alpha-2 → nome do país em húngaro, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "hu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/hy.json",
+      "type": "file",
+      "name": "hy.json",
+      "filePath": "langs/hy.json",
+      "summary": "Locale de dados 'hy' (armênio): mapa alpha-2 → nome do país em armênio, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "hy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/id.json",
+      "type": "file",
+      "name": "id.json",
+      "filePath": "langs/id.json",
+      "summary": "Locale de dados 'id' (indonésio): mapa alpha-2 → nome do país em indonésio, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "id"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/it.json",
+      "type": "file",
+      "name": "it.json",
+      "filePath": "langs/it.json",
+      "summary": "Locale de dados 'it' (italiano): mapa alpha-2 → nome do país em italiano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "it"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ja.json",
+      "type": "file",
+      "name": "ja.json",
+      "filePath": "langs/ja.json",
+      "summary": "Locale de dados 'ja' (japonês): mapa alpha-2 → nome do país em japonês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ja"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ka.json",
+      "type": "file",
+      "name": "ka.json",
+      "filePath": "langs/ka.json",
+      "summary": "Locale de dados 'ka' (georgiano): mapa alpha-2 → nome do país em georgiano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ka"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/kk.json",
+      "type": "file",
+      "name": "kk.json",
+      "filePath": "langs/kk.json",
+      "summary": "Locale de dados 'kk' (cazaque): mapa alpha-2 → nome do país em cazaque, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "kk"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ko.json",
+      "type": "file",
+      "name": "ko.json",
+      "filePath": "langs/ko.json",
+      "summary": "Locale de dados 'ko' (coreano): mapa alpha-2 → nome do país em coreano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ko"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ky.json",
+      "type": "file",
+      "name": "ky.json",
+      "filePath": "langs/ky.json",
+      "summary": "Locale de dados 'ky' (quirguiz): mapa alpha-2 → nome do país em quirguiz, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ky"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/lt.json",
+      "type": "file",
+      "name": "lt.json",
+      "filePath": "langs/lt.json",
+      "summary": "Locale de dados 'lt' (lituano): mapa alpha-2 → nome do país em lituano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "lt"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/lv.json",
+      "type": "file",
+      "name": "lv.json",
+      "filePath": "langs/lv.json",
+      "summary": "Locale de dados 'lv' (letão): mapa alpha-2 → nome do país em letão, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "lv"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/mk.json",
+      "type": "file",
+      "name": "mk.json",
+      "filePath": "langs/mk.json",
+      "summary": "Locale de dados 'mk' (macedônio): mapa alpha-2 → nome do país em macedônio, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "mk"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/mn.json",
+      "type": "file",
+      "name": "mn.json",
+      "filePath": "langs/mn.json",
+      "summary": "Locale de dados 'mn' (mongol): mapa alpha-2 → nome do país em mongol, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "mn"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/nb.json",
+      "type": "file",
+      "name": "nb.json",
+      "filePath": "langs/nb.json",
+      "summary": "Locale de dados 'nb' (norueguês (Bokmål)): mapa alpha-2 → nome do país em norueguês (Bokmål), 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "nb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/nl.json",
+      "type": "file",
+      "name": "nl.json",
+      "filePath": "langs/nl.json",
+      "summary": "Locale de dados 'nl' (holandês): mapa alpha-2 → nome do país em holandês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "nl"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/nn.json",
+      "type": "file",
+      "name": "nn.json",
+      "filePath": "langs/nn.json",
+      "summary": "Locale de dados 'nn' (norueguês (Nynorsk)): mapa alpha-2 → nome do país em norueguês (Nynorsk), 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "nn"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/pl.json",
+      "type": "file",
+      "name": "pl.json",
+      "filePath": "langs/pl.json",
+      "summary": "Locale de dados 'pl' (polonês): mapa alpha-2 → nome do país em polonês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "pl"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/pt.json",
+      "type": "file",
+      "name": "pt.json",
+      "filePath": "langs/pt.json",
+      "summary": "Locale de dados 'pt' (português): mapa alpha-2 → nome do país em português, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "pt"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ro.json",
+      "type": "file",
+      "name": "ro.json",
+      "filePath": "langs/ro.json",
+      "summary": "Locale de dados 'ro' (romeno): mapa alpha-2 → nome do país em romeno, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/ru.json",
+      "type": "file",
+      "name": "ru.json",
+      "filePath": "langs/ru.json",
+      "summary": "Locale de dados 'ru' (russo): mapa alpha-2 → nome do país em russo, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "ru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/sk.json",
+      "type": "file",
+      "name": "sk.json",
+      "filePath": "langs/sk.json",
+      "summary": "Locale de dados 'sk' (eslovaco): mapa alpha-2 → nome do país em eslovaco, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "sk"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/sl.json",
+      "type": "file",
+      "name": "sl.json",
+      "filePath": "langs/sl.json",
+      "summary": "Locale de dados 'sl' (esloveno): mapa alpha-2 → nome do país em esloveno, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "sl"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/sr.json",
+      "type": "file",
+      "name": "sr.json",
+      "filePath": "langs/sr.json",
+      "summary": "Locale de dados 'sr' (sérvio): mapa alpha-2 → nome do país em sérvio, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "sr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/sv.json",
+      "type": "file",
+      "name": "sv.json",
+      "filePath": "langs/sv.json",
+      "summary": "Locale de dados 'sv' (sueco): mapa alpha-2 → nome do país em sueco, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "sv"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/tr.json",
+      "type": "file",
+      "name": "tr.json",
+      "filePath": "langs/tr.json",
+      "summary": "Locale de dados 'tr' (turco): mapa alpha-2 → nome do país em turco, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "tr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/uk.json",
+      "type": "file",
+      "name": "uk.json",
+      "filePath": "langs/uk.json",
+      "summary": "Locale de dados 'uk' (ucraniano): mapa alpha-2 → nome do país em ucraniano, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "uk"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/uz.json",
+      "type": "file",
+      "name": "uz.json",
+      "filePath": "langs/uz.json",
+      "summary": "Locale de dados 'uz' (usbeque): mapa alpha-2 → nome do país em usbeque, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "uz"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:langs/zh.json",
+      "type": "file",
+      "name": "zh.json",
+      "filePath": "langs/zh.json",
+      "summary": "Locale de dados 'zh' (chinês): mapa alpha-2 → nome do país em chinês, 250 entradas.",
+      "tags": [
+        "i18n",
+        "locale-data",
+        "zh"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:index.js",
+      "target": "file:codes.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:index.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ar.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/az.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/be.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/bg.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/bs.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ca.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/cs.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/da.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/de.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/el.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/en.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/es.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/et.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/fa.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/fi.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/fr.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/he.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/hr.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/hu.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/hy.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/id.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/it.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ja.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ka.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/kk.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ko.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ky.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/lt.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/lv.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/mk.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/mn.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/nb.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/nl.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/nn.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/pl.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/pt.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ro.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/ru.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/sk.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/sl.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/sr.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/sv.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/tr.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/uk.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/uz.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:entry-node.js",
+      "target": "file:langs/zh.json",
+      "type": "registers_locale",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:test/iso-i18n-countries.js",
+      "target": "file:entry-node.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:Makefile",
+      "target": "file:test/iso-i18n-countries.js",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Makefile",
+      "target": "config:.jshintrc",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "config:Makefile",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.travis.yml",
+      "target": "config:Makefile",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:entry-node.js",
+      "type": "references",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:index.js",
+      "type": "references",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:index.d.ts",
+      "target": "file:index.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:core-lib",
+      "name": "Núcleo de Conversão ISO 3166-1",
+      "description": "index.js + codes.json (tabela bruta) + index.d.ts (typings) — a lógica de conversão entre alpha-2, alpha-3 e numeric, independente de idioma.",
+      "nodeIds": [
+        "file:index.js",
+        "file:codes.json",
+        "file:index.d.ts"
+      ]
+    },
+    {
+      "id": "layer:i18n-data",
+      "name": "Dados de Localização (46 idiomas)",
+      "description": "entry-node.js (entry point Node.js) e os 46 arquivos langs/*.json com o nome de cada país traduzido para cada idioma suportado (ISO 639-1).",
+      "nodeIds": [
+        "file:entry-node.js",
+        "file:langs/ar.json",
+        "file:langs/az.json",
+        "file:langs/be.json",
+        "file:langs/bg.json",
+        "file:langs/bs.json",
+        "file:langs/ca.json",
+        "file:langs/cs.json",
+        "file:langs/da.json",
+        "file:langs/de.json",
+        "file:langs/el.json",
+        "file:langs/en.json",
+        "file:langs/es.json",
+        "file:langs/et.json",
+        "file:langs/fa.json",
+        "file:langs/fi.json",
+        "file:langs/fr.json",
+        "file:langs/he.json",
+        "file:langs/hr.json",
+        "file:langs/hu.json",
+        "file:langs/hy.json",
+        "file:langs/id.json",
+        "file:langs/it.json",
+        "file:langs/ja.json",
+        "file:langs/ka.json",
+        "file:langs/kk.json",
+        "file:langs/ko.json",
+        "file:langs/ky.json",
+        "file:langs/lt.json",
+        "file:langs/lv.json",
+        "file:langs/mk.json",
+        "file:langs/mn.json",
+        "file:langs/nb.json",
+        "file:langs/nl.json",
+        "file:langs/nn.json",
+        "file:langs/pl.json",
+        "file:langs/pt.json",
+        "file:langs/ro.json",
+        "file:langs/ru.json",
+        "file:langs/sk.json",
+        "file:langs/sl.json",
+        "file:langs/sr.json",
+        "file:langs/sv.json",
+        "file:langs/tr.json",
+        "file:langs/uk.json",
+        "file:langs/uz.json",
+        "file:langs/zh.json"
+      ]
+    },
+    {
+      "id": "layer:build-test",
+      "name": "Build, Lint e Testes",
+      "description": "Makefile orquestra jshint + madge (dependência circular) + mocha + istanbul; .travis.yml é CI legado (Travis não está mais integrado à org); test/iso-i18n-countries.js é a suíte funcional.",
+      "nodeIds": [
+        "config:Makefile",
+        "config:.travis.yml",
+        "config:.jshintrc",
+        "config:.jshintignore",
+        "config:test/.jshintrc",
+        "file:test/iso-i18n-countries.js",
+        "config:package.json",
+        "config:package-lock.json"
+      ]
+    },
+    {
+      "id": "layer:docs-license",
+      "name": "Documentação e Licença",
+      "description": "README (uso da API) e LICENSE (MIT, upstream).",
+      "nodeIds": [
+        "document:README.md",
+        "document:LICENSE"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "O que é este fork",
+      "description": "README.md descreve i18n-iso-countries: conversão entre códigos ISO 3166-1 (alpha-2/alpha-3/numeric) e nomes de país traduzidos, com 46 idiomas suportados via arquivos langs/*.json carregados sob demanda (browser) ou automaticamente (Node.js, via entry-node.js). Fork mantido pela Apoia.se do upstream michaelwittig/node-i18n-iso-countries.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Núcleo de conversão de códigos",
+      "description": "index.js carrega codes.json (~249 territórios) e expõe as funções de conversão alpha2/alpha3/numeric e as funções de nome (getName/getNames) que dependem dos locales registrados via registerLocale.",
+      "nodeIds": [
+        "file:index.js",
+        "file:codes.json"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Carregamento automático de 46 idiomas",
+      "description": "entry-node.js (o entry point 'main' do package.json) importa index.js e registra automaticamente as 46 traduções em langs/*.json — cada arquivo é um locale independente com o mesmo schema {locale, countries}.",
+      "nodeIds": [
+        "file:entry-node.js"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Qualidade: lint, dependência circular e testes",
+      "description": "Makefile encadeia jshint (estilo), madge --circular (dependência circular) e mocha (test/iso-i18n-countries.js); istanbul mede cobertura. .travis.yml é CI legado (Node 4-8), sem integração ativa hoje.",
+      "nodeIds": [
+        "config:Makefile",
+        "file:test/iso-i18n-countries.js",
+        "config:.travis.yml"
+      ]
+    }
+  ]
+}
